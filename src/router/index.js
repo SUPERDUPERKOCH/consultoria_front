@@ -2,7 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import User from './user'
-import Paciente from './pacientes'
+import Alimento from './alimentos'
+import Aluno from './alunos'
+
 
 Vue.use(VueRouter)
 
@@ -14,7 +16,8 @@ const router = new VueRouter({
   },
   routes: [
     User,
-    Paciente,
+    Alimento,
+    Aluno,
     {
       path: '/',
       name: 'home',

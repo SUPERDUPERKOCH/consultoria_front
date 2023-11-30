@@ -2,21 +2,9 @@
   <div>
     <div class="row">
       <div class="col-md-12">
-        <base-crud
-          :ref="'pacientesCrud'"
-          crudName="Pacientes"
-          newText="Novo Paciente"
-          :table="table"
-          :columns="columns"
-          :options="options"
-          :endPoint="endPoint"
-          :enableAdd="true"
-          :enableEdit="true"
-          :enableDelete="true"
-          :enableView="true"
-          :enableReset="false"
-          :dataForm="dataForm"
-        >
+        <base-crud :ref="'alimentosCrud'" crudName="Alimentos" newText="Novo Alimento" :table="table" :columns="columns"
+          :options="options" :endPoint="endPoint" :enableAdd="true" :enableEdit="true" :enableDelete="true"
+          :enableView="true" :enableReset="false" :dataForm="dataForm">
         </base-crud>
       </div>
     </div>
@@ -29,24 +17,23 @@ import BaseCrud from "../../layouts/Base/BaseCrud";
 export default {
   data: function () {
     return {
-      table: "pacientesTable",
+      table: "alimentosTable",
       showMessageImport: false,
       usersCrud: {},
       pages: [],
       url: "",
-      columns: ["id", "title", "description", "actions"],
-      tableData: ["id", "title", "description"],
+      columns: ["id", "nome", "actions"],
+      tableData: ["id", "nome"],
       options: {
         filterByColumn: true,
         debounce: 1000,
-        filterable: ["title", "description"],
+        filterable: ["nome"],
         pagination: { chunk: 10, dropdown: false, nav: "scroll" },
         perPage: 10,
         perPageValues: [10, 25, 50, 100],
         headings: {
           id: "ID",
-          title: "Titulo",
-          description: "Descrição",
+          nome: "Alimento",
           actions: "Ações",
         },
 
@@ -71,7 +58,7 @@ export default {
           );
         },
       },
-      endPoint: "pacientes/",
+      endPoint: "alimentos/",
       dataForm: {},
     };
   },
@@ -101,6 +88,7 @@ export default {
 .VuePagination {
   text-align: center;
 }
+
 .uploading-image {
   display: flex;
   border-radius: 10px;

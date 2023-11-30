@@ -1,29 +1,29 @@
-import Crud from '../views/Paciente/Crud'
-import Entity from '../views/Paciente/Add'
+import Crud from '../views/Alimento/Crud'
+import Entity from '../views/Alimento/Add'
 
 let routes = {
-    path: '/pacientes',
+    path: '/alimentos',
     component: resolve => require(['../layouts/full/LayoutFull'], resolve),
     children: [
         {
-            path: '/pacientes/add',
-            name: 'NewPaciente',
+            path: '/alimentos/add',
+            name: 'NewAlimento',
             component: Entity
         },
         {
-            path: '/pacientes/edit/:id?',
-            name: 'EditPaciente',
+            path: '/alimentos/edit/:id?',
+            name: 'EditAlimento',
             component: Entity
         },
         {
-            path: '/pacientes',
-            name: 'list-pacientes',
+            path: '/alimentos',
+            name: 'list-alimentos',
             component: Crud,
             meta: {
-                pageTitle: 'Lista de Pacientes',
+                pageTitle: 'Lista de alimentos',
                 breadcrumb: [
                     {
-                        text: 'Pacientes',
+                        text: 'Alimentos',
                         active: true,
                     },
                 ],

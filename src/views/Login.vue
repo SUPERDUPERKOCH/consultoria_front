@@ -4,17 +4,11 @@
       <!-- Login v1 -->
       <b-card class="mb-0">
         <b-link class="brand-logo">
-          <img src="../assets/images/logo/logo.png" alt="logo" width="75" />
-          <img
-            src="../assets/images/logo/logop2.png"
-            class="mt-2 ml-1"
-            alt="logo"
-            height="35"
-          />
+          <img src="../assets/images/logo/Logo_King_page-0001.jpg" alt="logo" width="150" />
+
         </b-link>
 
-        <b-card-title class="mb-1"
-          >Bem-vindo ao sistema de Triagem! 👋
+        <b-card-title class="mb-1">Bem-vindo ao sistema de consultoria!
         </b-card-title>
         <b-card-text class="mb-2">
           Por favor, forneca suas credenciais para acessar a plataforma.
@@ -25,19 +19,9 @@
           <b-form class="auth-login-form mt-2" @submit.prevent>
             <!-- email -->
             <b-form-group label-for="email" label="E-mail">
-              <validation-provider
-                #default="{ errors }"
-                name="Email"
-                rules="required|email"
-              >
-                <b-form-input
-                  id="email"
-                  v-model="email"
-                  name="login-email"
-                  :state="errors.length > 0 ? false : null"
-                  placeholder="john@example.com"
-                  autofocus
-                />
+              <validation-provider #default="{ errors }" name="Email" rules="required|email">
+                <b-form-input id="email" v-model="email" name="login-email" :state="errors.length > 0 ? false : null"
+                  placeholder="john@example.com" autofocus />
               </validation-provider>
             </b-form-group>
 
@@ -49,31 +33,13 @@
                   <small>Esqueceu sua senha?</small>
                 </b-link>
               </div>
-              <validation-provider
-                #default="{ errors }"
-                name="Password"
-                rules="required"
-              >
-                <b-input-group
-                  class="input-group-merge"
-                  :class="errors.length > 0 ? 'is-invalid' : null"
-                >
-                  <b-form-input
-                    id="password"
-                    v-model="password"
-                    :type="passwordFieldType"
-                    class="form-control-merge"
-                    :state="errors.length > 0 ? false : null"
-                    name="login-password"
-                    placeholder="Password"
-                  />
+              <validation-provider #default="{ errors }" name="Password" rules="required">
+                <b-input-group class="input-group-merge" :class="errors.length > 0 ? 'is-invalid' : null">
+                  <b-form-input id="password" v-model="password" :type="passwordFieldType" class="form-control-merge"
+                    :state="errors.length > 0 ? false : null" name="login-password" placeholder="Password" />
 
                   <b-input-group-append is-text>
-                    <feather-icon
-                      class="cursor-pointer"
-                      :icon="passwordToggleIcon"
-                      @click="togglePasswordVisibility"
-                    />
+                    <feather-icon class="cursor-pointer" :icon="passwordToggleIcon" @click="togglePasswordVisibility" />
                   </b-input-group-append>
                 </b-input-group>
                 <small class="text-danger">{{ errors[0] }}</small>
@@ -82,23 +48,13 @@
 
             <!-- checkbox -->
             <b-form-group>
-              <b-form-checkbox
-                id="remember-me"
-                v-model="status"
-                name="checkbox-1"
-              >
+              <b-form-checkbox id="remember-me" v-model="status" name="checkbox-1">
                 Lembre dos meus dados
               </b-form-checkbox>
             </b-form-group>
 
             <!-- submit button -->
-            <b-button
-              variant="primary"
-              type="submit"
-              block
-              :disabled="invalid"
-              @click="login"
-            >
+            <b-button variant="dark" type="submit" block :disabled="invalid" @click="login">
               Entrar
             </b-button>
           </b-form>

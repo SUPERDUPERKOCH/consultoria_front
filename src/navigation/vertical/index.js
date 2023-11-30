@@ -13,8 +13,12 @@ export default [
         route: 'list-users',
       },
       {
-        title: 'Pacientes',
-        route: 'list-pacientes',
+        title: 'Alimentos',
+        route: 'list-alimentos',
+      },
+      {
+        title: 'Alunos',
+        route: 'list-alunos',
       },
     ],
   },

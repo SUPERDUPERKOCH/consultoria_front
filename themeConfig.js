@@ -9,19 +9,18 @@ export const $themeBreakpoints = {}
 // APP CONFIG
 export const $themeConfig = {
   app: {
-    appName: 'IT4D', // Will update name in navigation menu (Branding)
+    appName: '', // Will update name in navigation menu (Branding)
     // eslint-disable-next-line global-require
-    appLogoImage: require('@/assets/images/logo/logo.png'), // Will update logo in navigation menu (Branding)
+    appLogoImage: require('@/assets/images/logo/Logo_King_page-0001.jpg'), // Will update logo in navigation menu (Branding)
     appLogoImageBlank: require('@/assets/images/logo/logo_blank.png'), // Will update logo in navigation menu (Branding)
-    appLogoImageP2: require('@/assets/images/logo/logop2.png'), // Will update logo in navigation menu (Branding)
-    appLogoImageP3: require('@/assets/images/logo/logop3.png'), // Will update logo in navigation menu (Branding)
+    // Will update logo in navigation menu (Branding)
   },
   layout: {
     isRTL: false,
     skin: 'light', // light, dark, bordered, semi-dark
     routerTransition: 'zoom-fade', // zoom-fade, slide-fade, fade-bottom, fade, zoom-out, none
     type: 'vertical', // vertical, horizontal
-    contentWidth: 'full', // full, boxed
+    contentWidth: 'boxed', // full, boxed
     menu: {
       hidden: false,
       isCollapsed: false,
