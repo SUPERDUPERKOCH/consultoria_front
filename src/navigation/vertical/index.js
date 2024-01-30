@@ -22,4 +22,9 @@ export default [
       },
     ],
   },
+  {
+    title: 'Planejamentos',
+    route: 'list-planejamentos',
+    icon: 'ListIcon',
+  },
 ]

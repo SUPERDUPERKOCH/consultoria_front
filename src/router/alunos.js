@@ -23,7 +23,7 @@ let routes = {
                 pageTitle: 'Lista de alunos',
                 breadcrumb: [
                     {
-                        text: 'alunos',
+                        text: 'Alunos',
                         active: true,
                     },
                 ],

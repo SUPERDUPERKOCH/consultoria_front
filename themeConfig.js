@@ -9,10 +9,10 @@ export const $themeBreakpoints = {}
 // APP CONFIG
 export const $themeConfig = {
   app: {
-    appName: '', // Will update name in navigation menu (Branding)
+    appName: 'Consultoria King', // Will update name in navigation menu (Branding)
     // eslint-disable-next-line global-require
     appLogoImage: require('@/assets/images/logo/Logo_King_page-0001.jpg'), // Will update logo in navigation menu (Branding)
-    appLogoImageBlank: require('@/assets/images/logo/logo_blank.png'), // Will update logo in navigation menu (Branding)
+    appLogoImageBlank: require('@/assets/images/logo/Logo_King_page-0001.jpg'), // Will update logo in navigation menu (Branding)
     // Will update logo in navigation menu (Branding)
   },
   layout: {
@@ -20,18 +20,18 @@ export const $themeConfig = {
     skin: 'light', // light, dark, bordered, semi-dark
     routerTransition: 'zoom-fade', // zoom-fade, slide-fade, fade-bottom, fade, zoom-out, none
     type: 'vertical', // vertical, horizontal
-    contentWidth: 'boxed', // full, boxed
+    contentWidth: 'full', // full, boxed
     menu: {
       hidden: false,
       isCollapsed: false,
     },
     navbar: {
       // ? For horizontal menu, navbar type will work for navMenu type
-      type: 'floating', // static , sticky , floating, hidden
+      type: 'sticky', // static , sticky , floating, hidden
       backgroundColor: '', // BS color options [primary, success, etc]
     },
     footer: {
-      type: 'static', // static, sticky, hidden
+      type: 'hidden', // static, sticky, hidden
     },
     customizer: true,
     enableScrollToTop: true,

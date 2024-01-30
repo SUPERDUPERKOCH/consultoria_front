@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 import User from './user'
 import Alimento from './alimentos'
 import Aluno from './alunos'
-
+import Planejamento from './planejamentos'
 
 Vue.use(VueRouter)
 
@@ -18,6 +18,7 @@ const router = new VueRouter({
     User,
     Alimento,
     Aluno,
+    Planejamento,
     {
       path: '/',
       name: 'home',

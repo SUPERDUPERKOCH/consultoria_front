@@ -2,9 +2,9 @@
   <div>
     <div class="row">
       <div class="col-md-12">
-        <base-crud :ref="'alunosCrud'" crudName="Alunos" newText="Novo Aluno" :table="table" :columns="columns"
-          :options="options" :endPoint="endPoint" :enableAdd="true" :enableEdit="true" :enableDelete="true"
-          :enableView="true" :enableReset="false" :dataForm="dataForm">
+        <base-crud :ref="'planejamentosCrud'" crudName="Planejamentos" newText="Novo Aluno" :table="table" :columns="columns"
+          :options="options" :endPoint="endPoint" :enableAdd="false" :enableEdit="false" :enableDelete="false"
+          :enableView="false" :enableReset="false" :dataForm="dataForm" :extra="extra" @view="view">
         </base-crud>
       </div>
     </div>
@@ -58,7 +58,17 @@ export default {
           );
         },
       },
-      endPoint: "alunos/",
+      extra: [
+        {
+          id: 1,
+          label: "",
+          class: "btn btn-crud edit",
+          title: "Visualizar",
+          name: "view",
+          icon: "fas fa-eye",
+        },
+      ],
+      endPoint: "alunos",
       dataForm: {},
     };
   },
@@ -68,11 +78,7 @@ export default {
   methods: {
     query: function (query) {
       let columns = {
-        id: "id",
-        photo: "photo",
-        name: "name",
-        access_nivel: "access_nivel",
-        email: "email",
+        
       };
       let filters = "";
       $.each(query, function (index, value) {
@@ -80,6 +86,12 @@ export default {
       });
       return filters;
     },
+
+    view(props, row, index){
+      const self = this;
+      this.$router.push("planejamentos/view/" + props.row.id);
+
+    }
   },
 };
 </script>
